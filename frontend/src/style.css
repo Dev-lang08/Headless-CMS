@@ -1,0 +1,30 @@
+body,div{
+  margin:0 auto;
+  padding: 2px 2px 2px 2px;
+  text-align: center;
+}
+
+.container { 
+  display: flex;
+  width: fit-content;
+  height: auto;
+  margin: 0 auto;
+}
+
+.home{
+  width:fit-content;
+  height: fit-content;
+  float:none;
+}
+.s1    {
+  width:fit-content;
+  height: fit-content;
+  float:left;
+}
+.s2    {
+  width: fit-content;
+  height: fit-content;
+  float:right;
+}
+
+
