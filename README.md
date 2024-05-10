@@ -1,4 +1,4 @@
--> download the code
+-> download the code or git clone 
 
 -> install the dependencies
 
