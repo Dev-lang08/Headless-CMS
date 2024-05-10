@@ -6,10 +6,17 @@
 -> use the application
 
 -> use below line if you get this error{
+
   code: 'ER_NOT_SUPPORTED_AUTH_MODE',
+  
   errno: 1251,
+  
   sqlMessage: 'Client does not support authentication protocol requested by server; consider upgrading MySQL client',
+  
   sqlState: '08004',
+  
   fatal: true
+  
 }
+
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_mysql_password';
