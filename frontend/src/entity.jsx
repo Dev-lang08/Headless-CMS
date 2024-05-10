@@ -1,4 +1,4 @@
-// Entity.js
+import 'bootstrap/dist/css/bootstrap.css';
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -105,6 +105,7 @@ function Entity() {
   return (
     <div>
       <h2 className='container'>{entityName}</h2>
+      <div></div>
       <div className='container'>
         <div className='s1'>
           <table className='table table-bordered table-hover'>
@@ -131,14 +132,15 @@ function Entity() {
             </tbody>
           </table>
         </div>
-
+        <div></div>
         <div className='s2'>
           {selectedRow && (
             <form onSubmit={handleUpdate}>
               {columns.map(column => (
                 <div className='form-group' key={column}>
-                  <label htmlFor={column}>{column}</label>
-                  <input className='form-control' type="text" id={column} name={column} onChange={handleInputChange} value={formData[column] || ''} />
+                  <label className='s1' htmlFor={column}>{column}</label>
+                  <div></div>
+                  <input className='s2 form-control' type="text" id={column} name={column} onChange={handleInputChange} value={formData[column] || ''} />
                 </div>
               ))}
               <button className='btn btn-warning' type="submit">Update</button>
@@ -148,8 +150,10 @@ function Entity() {
             <form onSubmit={handleSubmit}>
               {columns.map(column => (
                 <div className='form-group' key={column}>
-                  <label htmlFor={column}>{column}</label>
-                  <input className='form-control' type="text" id={column} name={column} onChange={handleInputChange} value={formData[column] || ''} />
+                  <label className='s1' htmlFor={column}>{column}</label>
+                  <div></div>
+                  <input className='s2 form-control'  type="text" id={column} name={column} onChange={handleInputChange} value={formData[column] || ''} />
+                    <div></div>
                 </div>
               ))}
               <button className='btn btn-success' type="submit">Add Data</button>

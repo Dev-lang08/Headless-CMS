@@ -1,4 +1,3 @@
-// Home.js
 import 'bootstrap/dist/css/bootstrap.css';
 
 import React, { useState, useEffect } from 'react';

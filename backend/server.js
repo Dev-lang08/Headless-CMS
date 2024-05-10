@@ -1,5 +1,3 @@
-// server.js
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
@@ -126,6 +124,7 @@ app.post('/api/entities/:entityName', (req, res) => {
   });
 });
 
+// update values in a table
 app.put('/api/entities/:entityName/:id', async(req, res) => {
   const { entityName, id } = req.params;
   const data = req.body;
@@ -153,10 +152,10 @@ app.put('/api/entities/:entityName/:id', async(req, res) => {
   });
 });
 
+// delete a row from a table
 app.delete('/api/entities/:entityName/:id', async (req, res) => {
   const { entityName, id } = req.params;
   try {
-    // Fetch the primary key column name
     const columns = await getColumnNames(entityName);
     const primaryKey = await getPrimaryKey(entityName); 
     var key = null;
@@ -179,6 +178,7 @@ app.delete('/api/entities/:entityName/:id', async (req, res) => {
   }
 });
 
+// delete and entire entity(table)
 app.delete('/api/delete-entity/:entityName/', async (req, res) => {
   const { entityName, id } = req.params;
   try {
@@ -213,6 +213,7 @@ const getColumnNames = (entityName) => {
   });
 };
 
+// Function to fetch the primary key of an column
 const getPrimaryKey =  (entityName) => {
   //console.log("--------------------");
   return new Promise((resolve, reject) => {
@@ -237,6 +238,7 @@ const getPrimaryKey =  (entityName) => {
   });
 };
 
+// function to check if date field is present in the columns
 const getDOB =  (entityName) => {
   return new Promise((resolve, reject) => {
     const query = `SHOW COLUMNS FROM ${entityName}`;
@@ -258,6 +260,7 @@ const getDOB =  (entityName) => {
   });
 };
 
+// function to format DOB
 function formatDate(dateString) {
   const date = new Date(dateString);
   date.setDate(date.getDate() + 1); 

@@ -1,4 +1,4 @@
-body,div{
+body,div,input{
   margin:0 auto;
   padding: 2px 2px 2px 2px;
   text-align: center;
@@ -11,6 +11,8 @@ body,div{
   margin: 0 auto;
 }
 
+
+
 .home{
   width:fit-content;
   height: fit-content;
@@ -22,9 +24,18 @@ body,div{
   float:left;
 }
 .s2    {
+  
   width: fit-content;
   height: fit-content;
   float:right;
 }
 
 
+.td{
+  display: flex;
+  align-self: start;
+}
+option{
+  background-color: white;
+  color: black;
+}
