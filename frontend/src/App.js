@@ -9,6 +9,7 @@ import {
 import EntityForm from "./createEntity";
 import Home from "./home";
 import Entity from "./entity";
+import EntityView from "./viewEntites";
 
 function App() {
 	return (
@@ -18,13 +19,19 @@ function App() {
 					/
     				<Route
 						exact
-						path="/"
+						path="/Home"
 						element={<Home />}
 					/>
 					<Route
 						exact
 						path="/entity"
 						element={<EntityForm />}
+					/>
+
+					<Route
+						export
+						path="/viewEntity"
+						element={<EntityView />}
 					/>
 
 					<Route
@@ -36,7 +43,7 @@ function App() {
 					
 					<Route
 						path="*"
-						element={<Navigate to="/" />}
+						element={<Navigate to="/Home" />}
 					/>
 				</Routes>
 			</Router>
