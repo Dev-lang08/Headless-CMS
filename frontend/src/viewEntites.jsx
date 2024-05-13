@@ -37,14 +37,11 @@ function EntityView() {
             {entities.map((entity) => (
               <tr>
                 <td>
-                  <a key={entity}>
-                    <Link
-                      className="btn btn-outline-success"
-                      to={`/entity/${entity}`}
-                    >
+                  <p key={entity} className="btn btn-secondary">
+                    <Link className="link-light" to={`/entity/${entity}`}>
                       {entity}
                     </Link>
-                  </a>
+                  </p>
                 </td>
               </tr>
             ))}

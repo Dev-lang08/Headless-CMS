@@ -4,14 +4,13 @@ body,div,input{
   text-align: center;
 }
 
+
 .container { 
   display: flex;
   width: fit-content;
   height: auto;
   margin: 0 auto;
 }
-
-
 
 .home{
   width:fit-content;

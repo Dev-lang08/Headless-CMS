@@ -25,7 +25,11 @@ function EntityForm() {
   ]; // Define available attribute types
 
   const updateEntity = () => {
-    setEntity(1);
+    if (entityName !== "") setEntity(1);
+  };
+
+  const updateEntity2 = () => {
+    setEntity(-1);
   };
 
   const addAttribute = () => {
@@ -121,7 +125,7 @@ function EntityForm() {
           </div>
           <div className="container">
             <button className="btn btn-success" onClick={updateEntity}>
-              Create Entity
+              Add Attributes
             </button>
             {message && <p>{message}</p>}
           </div>
@@ -129,7 +133,14 @@ function EntityForm() {
       )}
       {entityNameSet === 1 && (
         <div>
-          <h2>Define Entity Attributes</h2>
+          <h2>Define Attributes for {entityName}</h2>
+          <div>
+            {entityNameSet == 1 && (
+              <button className="btn btn-warning" onClick={updateEntity2}>
+                Update Entity Name
+              </button>
+            )}
+          </div>
           <div className="container">
             <div className="s1">
               <div>
@@ -240,7 +251,7 @@ function EntityForm() {
           </div>
           <div className="container">
             <button className="btn btn-success" onClick={createEntity}>
-              Add Attributes
+              Create Entity
             </button>
             {message && <p>{message}</p>}
           </div>
