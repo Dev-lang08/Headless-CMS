@@ -5,6 +5,10 @@ body,div,input{
 }
 
 
+p{
+  font-size: x-large;
+}
+
 .container { 
   display: flex;
   width: fit-content;

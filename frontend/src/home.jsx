@@ -7,13 +7,16 @@ function Home() {
   return (
     <div>
       <div>
-        <h2>Welcome to the Headless CMS</h2>
+        <h1>Headless CMS Vahan Assignment</h1>
         <p>
           This is a simple headless CMS application where you can create
           entities with attributes and types, and perform CRUD operations on
           them.
         </p>
-        <p>Use the buttons below to create a new entity</p>
+        <p>
+          Use the buttons below to create a new entity or view an existing
+          entity
+        </p>
       </div>
       <div>
         <Link to="/entity">

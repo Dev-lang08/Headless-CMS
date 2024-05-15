@@ -111,8 +111,8 @@ function EntityForm() {
   return (
     <div>
       {entityNameSet === -1 && (
-        <div>
-          <h2>Create Entity</h2>
+        <div className="form-group">
+          <h1>Create Entity</h1>
           <div className="input-group has-validation container">
             <input
               className="form-control"
@@ -133,7 +133,7 @@ function EntityForm() {
       )}
       {entityNameSet === 1 && (
         <div>
-          <h2>Define Attributes for {entityName}</h2>
+          <h1>Define Attributes for {entityName}</h1>
           <div>
             {entityNameSet == 1 && (
               <button className="btn btn-warning" onClick={updateEntity2}>
