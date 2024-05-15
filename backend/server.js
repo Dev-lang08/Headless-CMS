@@ -285,7 +285,7 @@ const getDOB = (entityName) => {
   });
 };
 
-// function to format DOB
+// function to format Date type data
 function formatDate(dateString) {
   const date = new Date(dateString);
   date.setDate(date.getDate() + 1);
